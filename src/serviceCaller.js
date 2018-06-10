@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/'
+const API = 'http://54.147.40.233:3000/'
 
 let msgSuccess = false;
 
