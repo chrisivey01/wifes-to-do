@@ -6,7 +6,7 @@ let msgSuccess = false;
 export default{
 
     sendText(){
-        return fetch(API)
+        return fetch(API+ 'msg')
             .then(response => response.json())
             .then((success) => {
                 msgSuccess = success;
