@@ -2,7 +2,9 @@
     <div>
         <div>
             <label> Only delete one at a time till I become a better developer!</label>
-            <label>{{textMessage}}</label>
+            <div>
+                <label class="sentText">{{textMessage}}</label>
+            </div>
         </div>
         <input v-model="item"/>
         <button @click="add">add</button>
@@ -70,6 +72,7 @@
             add() {
                 this.stuffs.push({item: this.item, clicked: false});
                 sendItems.sendItems(this.item)
+                this.item = ""
             },
 
             remove() {
@@ -91,9 +94,6 @@
                     }
                 )
             }
-        //     getWorkouts.getWorkouts(1, this.lift).then(data => {
-        //     data.json().then(items => this.items = items)
-        // });
         }
     }
 
@@ -102,5 +102,9 @@
 <style scoped>
     .selected{
         background-color: blueviolet;
+    }
+
+    .sentText{
+        background-color: red;
     }
 </style>
