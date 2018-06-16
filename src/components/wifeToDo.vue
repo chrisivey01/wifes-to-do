@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <label> Only delete one at a time till I become a better developer!</label>
+            <label> Only delete one at a time!</label>
             <div>
                 <label class="sentText">{{textMessage}}</label>
             </div>
@@ -94,6 +94,9 @@
                     }
                 )
             }
+        },
+        beforeMount(){
+            this.refresh();
         }
     }
 
