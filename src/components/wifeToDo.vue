@@ -1,27 +1,29 @@
 <template>
     <div>
-        <div>
-            <label> Only delete one at a time!</label>
+        <div class="container">
             <div>
-                <label class="sentText">{{textMessage}}</label>
+                <label> Only delete one at a time!</label>
+                <div>
+                    <label class="sentText">{{textMessage}}</label>
+                </div>
             </div>
-        </div>
-        <input v-model="item"/>
-        <button @click="add">add</button>
+            <input v-model="item"/>
+            <button @click="add">add</button>
 
-        <ul id="example" >
-            <li v-for="task in todo" :class="{'selected': task.clicked}" :key="task.id" @click="changeColor(task,todo)">
-                {{task.todo}}
-            </li>
-        </ul>
-        <div>
-            <button @click="remove">Remove</button>
-        </div>
-        <div>
-            <button @click="refresh">Refresh List</button>
-        </div>
-        <div>
-            <button @click="notify"> Notify Wife</button>
+            <ul class="list-group"  >
+                <li class="list-group-item" v-for="task in todo" :class="{'selected': task.clicked}" :key="task.id" @click="changeColor(task,todo)">
+                    {{task.todo}}
+                </li>
+            </ul>
+            <div>
+                <button @click="remove">Remove</button>
+            </div>
+            <div>
+                <button @click="refresh">Refresh List</button>
+            </div>
+            <div>
+                <button @click="notify"> Notify Wife</button>
+            </div>
         </div>
     </div>
 </template>

@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-
     <wife-to-do></wife-to-do>
+
+    <mood></mood>
   </div>
 </template>
 
 <script>
 import wifeToDo from './components/wifeToDo'
+import mood from './components/mood'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default {
   name: 'app',
   components: {
-      wifeToDo
+      wifeToDo,
+      mood
   }
 }
 </script>
