@@ -70,7 +70,7 @@
         -webkit-border-radius: 75px;
         width: 150px;
         left:35%;
-        position:fixed;
+        position:relative;
     }
 
     .green-circle {
@@ -80,6 +80,6 @@
         -webkit-border-radius: 75px;
         width: 150px;
         left:35%;
-        position:fixed;
+        position:relative;
     }
 </style>
